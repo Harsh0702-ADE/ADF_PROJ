@@ -39,6 +39,10 @@
 							"Tablename": {
 								"value": "@pipeline().parameters.TableName",
 								"type": "Expression"
+							},
+							"Value": {
+								"value": "@pipeline().parameters.Value",
+								"type": "Expression"
 							}
 						}
 					},
@@ -108,6 +112,9 @@
 			"TableSchema": {
 				"type": "string",
 				"defaultValue": "dbo"
+			},
+			"Value": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
