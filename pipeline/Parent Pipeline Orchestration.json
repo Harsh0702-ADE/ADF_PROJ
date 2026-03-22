@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "DS_SQLTBL_LKUP",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -64,22 +65,10 @@
 								},
 								"waitOnCompletion": true,
 								"parameters": {
-									"TableSchema": {
-										"value": "@pipeline().parameters.TableSchema",
-										"type": "Expression"
-									},
-									"TableName": {
-										"value": "@pipeline().parameters.TableName",
-										"type": "Expression"
-									},
-									"WatermarkColumn": {
-										"value": "@pipeline().parameters.WatermarkColumn",
-										"type": "Expression"
-									},
-									"LastLoadValue": {
-										"value": "@pipeline().parameters.LastLoadValue",
-										"type": "Expression"
-									}
+									"TableSchema": "@item().TableSchema",
+									"TableName": "@item().TableName",
+									"WatermarkColumn": "@item().WatermarkColumn",
+									"LastLoadValue": "@item().LastLoadValue"
 								}
 							}
 						}
