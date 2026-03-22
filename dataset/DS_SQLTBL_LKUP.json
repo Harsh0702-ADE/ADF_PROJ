@@ -11,9 +11,6 @@
 			},
 			"Tablename": {
 				"type": "string"
-			},
-			"Value": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
